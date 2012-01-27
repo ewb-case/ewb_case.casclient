@@ -5,7 +5,7 @@ version = '0.1.0'
 
 setup(name='ewb_case.cas_authentication',
       version=version,
-      description="CAS authentication for EWB Case website.",
+      description="Supporting package for CAS authentication for EWB Case website.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
