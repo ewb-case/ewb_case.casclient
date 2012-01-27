@@ -21,7 +21,7 @@
           i18n:domain="ewb_case.cas_authentication" insert-before="*">
             <property name="title" i18n:translate="">SSO log in</property>
             <property name="description" i18n:translate=""></property>
-            <property name="url_expr">string:${globals_view/navigationRootUrl}/caslogin</property>
+            <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogin</property>
             <property name="icon_expr"></property>
             <property name="available_expr">python:member is None</property>
             <property name="permissions">
@@ -34,7 +34,7 @@
           i18n:domain="ewb_case.cas_authentication" insert-after="caslogin">
             <property name="title" i18n:translate="">SSO log out</property>
             <property name="description" i18n:translate=""></property>
-            <property name="url_expr">string:${globals_view/navigationRootUrl}/caslogout</property>
+            <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogout</property>
             <property name="icon_expr"></property>
             <property name="available_expr">python:member is not None</property>
             <property name="permissions">

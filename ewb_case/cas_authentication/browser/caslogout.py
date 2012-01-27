@@ -9,9 +9,10 @@ class CasLogOut(BrowserView):
 
     def __call__(self):
         portal = self.context.portal_url.getPortalObject()
-        cas_client_plugin = self.portal.acl_users.anz_casclient
+        acl = getToolByName(portal, "acl_users")
+        cas_client_plugin = acl.anz_casclient
         
-        mt = getToolByName(context, 'portal_membership')
+        mt = getToolByName(self.context, 'portal_membership')
         mt.logoutUser(REQUEST=self.request)
         
         self.request.RESPONSE.redirect(cas_client_plugin.casServerUrlPrefix + '/logout')
