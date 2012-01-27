@@ -1,31 +1,29 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '0.1.0'
 
 setup(name='ewb_case.cas_authentication',
       version=version,
       description="CAS authentication for EWB Case website.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from
-      # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Matt Bierner',
+      author_email='mattbierner@gmail.com',
+      url='https://github.com/mattbierner/ewb_case.cas_authentication',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['ewb_case', 'ewb_case.cas_authentication'],
+      namespace_packages=['ewb_case', ],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'anz.casclient',
       ],
       entry_points="""
       # -*- Entry points: -*-

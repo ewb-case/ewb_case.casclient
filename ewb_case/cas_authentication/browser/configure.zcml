@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ewb_case.cas_authentication">
+    
+    
+    <browser:page
+        name="caslogin"
+        for="*"
+        class=".caslogin.CasLogIn"
+        permission="zope2.View"
+        />
+        
+    <browser:page
+        name="caslogout"
+        for="*"
+        class=".caslogout.CasLogOut"
+        permission="zope2.View"
+        />
+        
+</configure>

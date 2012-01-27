@@ -1,0 +1,4 @@
+global-include *.py *.pt *.js *.zcml *.png *.svg *.css *.txt *.GPL *.xml
+global-exclude *.pyc
+recursive-include docs *
+recursive-include ewb_case *
