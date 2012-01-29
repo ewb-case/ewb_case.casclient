@@ -5,6 +5,13 @@
     
     
     <browser:page
+        name="casclient_callback"
+        for="*"
+        class=".casclient_callback.CasClientCallback"
+        permission="zope2.View"
+        />
+    
+    <browser:page
         name="caslogin"
         for="*"
         class=".caslogin.CasLogIn"

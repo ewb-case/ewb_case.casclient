@@ -1,7 +1,12 @@
 Changelog
 =========
 
-0.1.0 (beta)
+0.1.2 (beta)
+-------------------
+
+- Have users adjust their password after first login.
+
+0.1.1 (beta)
 -------------------
 
 - Initial release

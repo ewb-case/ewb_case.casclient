@@ -10,16 +10,11 @@
         <object name="logout" meta_type="CMF Action" i18n:domain="plone">
             <property name="visible">False</property>
         </object>
-        
-      <!-- Hide the join option  -->
-        <object name="join" meta_type="CMF Action" i18n:domain="plone">
-            <property name="visible">True</property>
-        </object>
       
       <!-- Create actions for CAS login and logout -->
         <object name="caslogin" meta_type="CMF Action"
           i18n:domain="ewb_case.casclient" insert-before="*">
-            <property name="title" i18n:translate="">SSO log in</property>
+            <property name="title" i18n:translate="">SSO Log In</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogin</property>
             <property name="icon_expr"></property>
@@ -32,7 +27,7 @@
         
         <object name="caslogout" meta_type="CMF Action"
           i18n:domain="ewb_case.casclient" insert-after="caslogin">
-            <property name="title" i18n:translate="">SSO log out</property>
+            <property name="title" i18n:translate="">SSO Log Out</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogout</property>
             <property name="icon_expr"></property>

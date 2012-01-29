@@ -10,13 +10,13 @@ class CasLogIn(BrowserView):
     def __call__(self):
         portal = self.context.portal_url.getPortalObject()
         acl = getToolByName(portal, "acl_users")
-        plugin = acl.anz_casclient
+        cas_client_plugin = acl.casclient
 
-        if plugin.casServerUrlPrefix:
-            url = plugin.getLoginURL() + '?service=' + plugin.getService()
-            if plugin.renew:
+        if cas_client_plugin.casServerUrlPrefix:
+            url = "%s?service=%s" % (cas_client_plugin.getLoginURL(), cas_client_plugin.getService())
+            if cas_client_plugin.renew:
                 url += '&renew=true'
-            if plugin.gateway:
+            if cas_client_plugin.gateway:
                 url += '&gateway=true'
         
             self.request.RESPONSE.redirect(url, lock=1)

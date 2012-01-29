@@ -1,22 +1,10 @@
-from AccessControl import Permissions
-
-from Products.PluggableAuthService.PluggableAuthService import registerMultiPlugin
-
-from ewb_case.casclient.casclient import CasClient, manage_addAnzCASClient, addAnzCASClientForm
+from ewb_case.casclient import install
 
 
-# register plugins with pas
-try:
-    registerMultiPlugin(CasClient.meta_type)
-except RuntimeError:
-    pass
+install.register_casclient_plugin()
+
 
 def initialize(context):
-    context.registerClass(AnzCASClient,
-        permission=Permissions.manage_users,
-        constructors=(
-            add_cas_client_form,
-            addCasClient
-        ),
-        visibility=None
-    )
+    """
+    """
+    install.register_casclient_plugin_class(context)

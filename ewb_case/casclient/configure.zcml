@@ -7,5 +7,5 @@
     
     <include package=".browser" />
     <include file="profiles.zcml" />
-    
+
 </configure>
