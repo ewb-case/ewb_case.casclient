@@ -7,6 +7,6 @@ Introduction
 About
 =====
 
-Provides the views and actions for the anz.casclient. anz.casclient must still be
-setup correctly.
+Provides CAS authentication by extending anz.casclient. Creates normal plone users
+similar to the AutoUserMakerPASPlugin.
 

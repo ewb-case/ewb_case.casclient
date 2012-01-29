@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.0'
+version = '0.1.1'
 
-setup(name='ewb_case.cas_authentication',
+setup(name='ewb_case.casclient',
       version=version,
-      description="Supporting package for CAS authentication for EWB Case website.",
+      description="Provides CAS authentication for EWB Case website.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
@@ -15,7 +15,7 @@ setup(name='ewb_case.cas_authentication',
       keywords='',
       author='Matt Bierner',
       author_email='mattbierner@gmail.com',
-      url='https://github.com/mattbierner/ewb_case.cas_authentication',
+      url='https://github.com/mattbierner/ewb_case.casclient',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['ewb_case', ],

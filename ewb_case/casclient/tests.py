@@ -10,7 +10,7 @@ from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import PloneSite
 ptc.setupPloneSite()
 
-import ewb_case.cas_authentication.cas_authentication
+import ewb_case.casclient.cas_authentication
 
 class TestCase(ptc.PloneTestCase):
     class layer(PloneSite):
@@ -18,7 +18,7 @@ class TestCase(ptc.PloneTestCase):
         def setUp(cls):
             fiveconfigure.debug_mode = True
             zcml.load_config('configure.zcml',
-                             ewb_case.cas_authentication.cas_authentication)
+                             ewb_case.casclient.cas_authentication)
             fiveconfigure.debug_mode = False
 
         @classmethod
@@ -31,21 +31,21 @@ def test_suite():
 
         # Unit tests
         #doctestunit.DocFileSuite(
-        #    'README.txt', package='ewb_case.cas_authentication.cas_authentication',
+        #    'README.txt', package='ewb_case.casclient.cas_authentication',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
         #doctestunit.DocTestSuite(
-        #    module='ewb_case.cas_authentication.cas_authentication.mymodule',
+        #    module='ewb_case.casclient.cas_authentication.mymodule',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
 
         # Integration tests that use PloneTestCase
         #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='ewb_case.cas_authentication.cas_authentication',
+        #    'README.txt', package='ewb_case.casclient.cas_authentication',
         #    test_class=TestCase),
 
         #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='ewb_case.cas_authentication.cas_authentication',
+        #    'browser.txt', package='ewb_case.casclient.cas_authentication',
         #    test_class=TestCase),
 
         ])

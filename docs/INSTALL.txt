@@ -1,8 +1,8 @@
-ewb_case.cas_authentication Installation
+ewb_case.casclient Installation
 =======================
 
  * When you're reading this you have probably already run
-   ``easy_install ewb_case.cas_authentication``. Find out how to install setuptools
+   ``easy_install ewb_case.casclient``. Find out how to install setuptools
    (and EasyInstall) here:
    http://peak.telecommunity.com/DevCenter/EasyInstall
 
@@ -12,24 +12,24 @@ ewb_case.cas_authentication Installation
 
    into your Zope instance.
 
- * Create a file called ``ewb_case.cas_authentication-configure.zcml`` in the
+ * Create a file called ``ewb_case.casclient-configure.zcml`` in the
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
-       <include package="ewb_case.cas_authentication.cas_authentication" />
+       <include package="ewb_case.casclient.cas_authentication" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
- * Add ``ewb_case.cas_authentication`` to the list of eggs to install, e.g.:
+ * Add ``ewb_case.casclient`` to the list of eggs to install, e.g.:
 
     [buildout]
     ...
     eggs =
         ...
-        ewb_case.cas_authentication
+        ewb_case.casclient
 
   * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
@@ -37,7 +37,7 @@ recipe to manage your project, you can do this:
     recipe = plone.recipe.zope2instance
     ...
     zcml =
-        ewb_case.cas_authentication.cas_authentication
+        ewb_case.casclient.cas_authentication
 
   * Re-run buildout, e.g. with:
 

@@ -18,7 +18,7 @@
       
       <!-- Create actions for CAS login and logout -->
         <object name="caslogin" meta_type="CMF Action"
-          i18n:domain="ewb_case.cas_authentication" insert-before="*">
+          i18n:domain="ewb_case.casclient" insert-before="*">
             <property name="title" i18n:translate="">SSO log in</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogin</property>
@@ -31,7 +31,7 @@
         </object>
         
         <object name="caslogout" meta_type="CMF Action"
-          i18n:domain="ewb_case.cas_authentication" insert-after="caslogin">
+          i18n:domain="ewb_case.casclient" insert-after="caslogin">
             <property name="title" i18n:translate="">SSO log out</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:${globals_view/navigationRootUrl}/@@caslogout</property>
